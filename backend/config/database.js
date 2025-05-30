@@ -1,10 +1,14 @@
 const mysql = require("mysql2");
 
 const connection = mysql.createPool({
-    host: "127.0.0.1",
-    user: "root",
-    password: "2003",
-    database: "nextjs_post"
+    host: "blog-posting-sot-f7af.d.aivencloud.com",
+    port: 13215,
+    user: "avnadmin",
+    password: "AVNS_-H6fKoCyP4f4KXZO29U",
+    database: "defaultdb",
+    ssl: {
+        rejectUnauthorized: false
+    },
 })
 
 connection.getConnection((err, con) => {
